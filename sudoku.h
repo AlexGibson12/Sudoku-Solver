@@ -11,6 +11,7 @@ typedef struct {
 class SudokuBoard{
 	public:
 		int size;
+        int freepositions;
 		vector<vector<SudokuEntry>> board;
         SudokuBoard(int size);
        
