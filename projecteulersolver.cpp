@@ -34,7 +34,7 @@ int main()
     stuff.LoadBoard(state);
     l+=stuff.SolveBoard();
     }
-    cout << l;
+    cout << l << endl;
     return 0;
 
 }

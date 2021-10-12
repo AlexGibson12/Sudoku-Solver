@@ -2,31 +2,19 @@
 #define sudoku_board_h
 #include <bits/stdc++.h>
 using namespace std;
-typedef enum {
 
-    NUMBER,
-
-    BLANK
-
-} CellType;
 
 typedef struct {
-
-    CellType type;
-
     int entry;
-
     set<int> possibilities;
-
 } SudokuEntry;
 class SudokuBoard{
 	public:
 		int size;
-		vector<vector<SudokuEntry*>> board;
+		vector<vector<SudokuEntry>> board;
         SudokuBoard(int size);
-        SudokuBoard(int initsize, vector<vector<SudokuEntry*>> initial);
-        bool ValidRow(vector<SudokuEntry*> entries);
-        void PlaceEntry(int x, int y, int value);
+       
+        vector<pair<int,int>> PlaceEntry(int x, int y, int value);
         bool BoardIsSolved();
         void printBoard();
         int SolveBoard();
